@@ -10,6 +10,7 @@ code {
 }
 
 a{text-decoration: none;color: #71737b;}
+li{list-style: none;}
 * {
   margin: 0;
   padding: 0;
