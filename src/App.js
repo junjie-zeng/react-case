@@ -1,19 +1,29 @@
+import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 
-import Example1 from './components/hooks-demo/Example1'
-import Example2 from './components/hooks-demo/Example2'
-import Example3 from './components/hooks-demo/Example3'
-import Example4 from './components/hooks-demo/Example4'
-import Example5 from './components/hooks-demo/Example5'
-import Example6 from './components/hooks-demo/Example6'
-import Example7 from './components/hooks-demo/Example7'
 
+import Hooks from './components/hooks-demo/index'
+import AppRoute from './components/router-demo/index'
 
 function App() {
   return (
-    <div style = {{padding:'10px'}}>
-      <h1>Hooks</h1>
-      <Example7/>
-    </div>
+    <Router>
+      <div >
+        <div className="nav">
+          <ul>
+            <li>
+              <Link to = "/">HOOKS</Link>
+            </li>
+            <li>
+              <Link to = "/appRoute">Router</Link>
+            </li>
+          </ul>
+        </div>
+        <div className="content">
+          <Route path="/" exact component={Hooks}></Route>
+          <Route path="/appRoute" component={AppRoute}></Route>
+        </div>
+      </div>
+    </Router>
   );
 }
 
