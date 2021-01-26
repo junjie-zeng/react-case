@@ -20,7 +20,7 @@ function App() {
         </div>
         <div className="content">
           <Route path="/" exact component={Hooks}></Route>
-          <Route path="/appRoute" component={AppRoute}></Route>
+          <Route path="/appRoute/" component={AppRoute}></Route>
         </div>
       </div>
     </Router>

@@ -17,8 +17,8 @@ export default function AppRouter() {
                 <div className="right-content">
                     <h3 className="right-title">路由体验</h3>
                     <div className="right-content-details">
-                        <Route path="/appRoute/chuancan" component={Example1}></Route>
-                        <Route path="/appRoute/redirect" component={Example2}></Route>
+                        <Route path="/appRoute/chuancan/" component={Example1}></Route>
+                        <Route path="/appRoute/redirect/" component={Example2}></Route>
                     </div>
                 </div>
             </div>
