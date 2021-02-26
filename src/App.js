@@ -5,6 +5,7 @@ import Hooks from './components/hooks-demo/index'
 import AppRoute from './components/router-demo/index'
 import ContextTest from './components/communication/context'
 import Hoc from './components/communication/hoc'
+import Editor from './components/editor/index'
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
             <li>
               <Link to = "/hoc">Hoc</Link>
             </li>
+            <li>
+              <Link to = "/editor">编辑器案例</Link>
+            </li>
           </ul>
         </div>
         <div className="content">
@@ -31,6 +35,7 @@ function App() {
           <Route path="/appRoute/" component={AppRoute}></Route>
           <Route path="/context" component={ContextTest}></Route>
           <Route path="/hoc" component={Hoc}></Route>
+          <Route path="/editor" component={Editor}></Route>
         </div>
       </div>
     </Router>
