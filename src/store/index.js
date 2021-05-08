@@ -20,4 +20,5 @@ class MobxDemoStore{
 // })
 
 const store = new MobxDemoStore()
+console.log(store)
 export default store
