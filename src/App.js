@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
-import { Provider } from 'mobx-react'
 
 
 import Hooks from './components/hooks-demo/index'
@@ -9,7 +8,7 @@ import Hoc from './components/communication/hoc'
 import Editor from './components/editor/index'
 import RenderProp from './components/render-props/index'
 import AntdTest from './components/antd/index'
-import MobxDemo from './components/mobx-demo/Index'
+import MobxDemo from './components/mobx-demo'
 import TodoList from './components/todoList'
 
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
