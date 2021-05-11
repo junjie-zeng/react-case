@@ -5,9 +5,13 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom"
     useEffect
 
 
-    useEffect的第二个参数，它是一个数组，数组中可以写入很多状态对应的变量，
-    意思是当状态值发生变化时，我们才进行解绑。但是当传空数组[]时，就是当组件将被销毁时才进行解绑，
-    这也就实现了componentWillUnmount的生命周期函数。
+    1. useEffect的第二个参数，它是一个数组，数组中可以写入状态对应的变量，用于监听这个状态。
+        a. 如果不传递第二个参数，只要state发生了变化就会重新执行useEffect  ===> componentDidUpdate
+        b. 如果传递的是一个空数组，则不会随着state的变化而重新执行useEffect  ===> componentDidMount
+        c. 如果传递一个数组，并写入指定的状态，则只有该状态发生变化才会重新执行useEffect 
+        d. 在useEffect中返回一个回调代表卸载 ===> componentWillUnmount
+
+
 */
 // 类
 class Example extends Component {

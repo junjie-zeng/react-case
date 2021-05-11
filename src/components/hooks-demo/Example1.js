@@ -5,6 +5,7 @@ import { useState } from 'react'
     useState
     
     useState 是react自带的一个hook函数，它的作用是用来声明状态变量。
+        返回两个元素的数组：第一个元素为状态值，第二个元素为更改状态值的函数
 
 */
 // 类
