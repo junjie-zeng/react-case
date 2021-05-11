@@ -5,22 +5,20 @@ import { observer,inject } from 'mobx-react'
 @observer
 class index extends Component {
 
-    handleAdd = () => {
-        // console.log(this.props)
-        this.props.mobxState.addTodo()
-    }
+    
 
     render() {
         const { mobxState } = this.props
-        // console.log(this.props)
+        console.log("类...",this.props)
+        // console.log("mobxState...",mobxState)
         // console.log(mobxState)
         return (
             <div >
-                <h5>类组件</h5>
-                <button onClick={this.handleAdd}>增加一条</button>
+                <h5>类组件（props用法）</h5>
+                <button onClick={()=>mobxState.addTodo()}>增加一条(当前{mobxState.todosLength}条)</button>
                 <br />
-                <ul>
-                    {mobxState.todos.map((item, index) => <li key={index}>* {item.name}</li>)}
+                <ul style = {{padding:'10px'}}> 
+                    {mobxState.todos.map((item, index) => <li key={index}>* {item.name} <button onClick = {()=>mobxState.deleteTod(index)}>删除</button></li>)}
                 </ul>
             </div>
         )
