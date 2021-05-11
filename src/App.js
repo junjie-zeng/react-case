@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import { BrowserRouter, HashRouter, Route, Link, Switch } from "react-router-dom"
 
 
 import Hooks from './components/hooks-demo/index'
@@ -20,7 +20,7 @@ const { Header, Content, Footer, Sider } = Layout;
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <div >
         <Header className="header">
           <div className="logo" />
@@ -37,27 +37,27 @@ function App() {
             <Menu.Item key="5"> <Link to="/hoc">Hoc</Link></Menu.Item>
             <Menu.Item key="6"> <Link to="/editor">编辑器案例</Link></Menu.Item>
             <Menu.Item key="7"><Link to="/antd">Antd</Link></Menu.Item>
-            <Menu.Item key="8"><Link to="/mobx">MobxDemo</Link></Menu.Item>
+            <Menu.Item key="8"><Link to="/mobx?id=8">MobxDemo</Link></Menu.Item>
             <Menu.Item key="9"><Link to="/todolist">TodoList</Link></Menu.Item>
-
           </Menu>
         </Header>
 
         <div className="content">
-          <Route path="/" exact component={Hooks}></Route>
-          <Route path="/appRoute/" component={AppRoute}></Route>
-          <Route path="/context" component={ContextTest}></Route>
-          <Route path="/hoc" component={Hoc}></Route>
-          <Route path="/editor" component={Editor}></Route>
-          <Route path="/render_props" component={RenderProp}></Route>
-          <Route path="/antd" component={AntdTest}></Route>
-          <Route path="/mobx" component={MobxDemo}></Route>
-          {/* <Route path="/todolist" component={TodoList}></Route> */}
-          <Route path="/todolist" render={(props) => (<TodoList {...props} />)}></Route>
-
+          <Switch>
+            <Route path="/" exact component={Hooks}></Route>
+            <Route path="/appRoute/" component={AppRoute}></Route>
+            <Route path="/context" component={ContextTest}></Route>
+            <Route path="/hoc" component={Hoc}></Route>
+            <Route path="/editor" component={Editor}></Route>
+            <Route path="/render_props" component={RenderProp}></Route>
+            <Route path="/antd" component={AntdTest}></Route>
+            <Route path="/mobx" component={MobxDemo}></Route>
+            {/* <Route path="/todolist" component={TodoList}></Route> */}
+            <Route path="/todolist" render={(props) => (<TodoList {...props} />)}></Route>
+          </Switch>
         </div>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
