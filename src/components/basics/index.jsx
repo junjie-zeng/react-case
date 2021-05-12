@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import SetStateDemo from './setState'
 import RefDemo from './ref'
 import ContextDemo from './context'
+import PureComponentDemo from './pureComponet'
 export default class index extends Component {
     render() {
         return (
@@ -12,6 +13,7 @@ export default class index extends Component {
                 <hr />
                 <ContextDemo/>
                 <hr />
+                <PureComponentDemo/>
             </div>
         )
     }
