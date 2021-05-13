@@ -1,8 +1,17 @@
 import React, { Component } from 'react'
+// setState
 import SetStateDemo from './setState'
+// Ref
 import RefDemo from './ref'
+// 上下文
 import ContextDemo from './context'
+// pureComponent
 import PureComponentDemo from './pureComponet'
+// render props
+import RenderPropsDemo from './renderProps'
+
+
+
 export default class index extends Component {
     render() {
         return (
@@ -14,6 +23,8 @@ export default class index extends Component {
                 <ContextDemo/>
                 <hr />
                 <PureComponentDemo/>
+                <hr />
+                <RenderPropsDemo/>
             </div>
         )
     }

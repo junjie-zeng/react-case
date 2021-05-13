@@ -1,0 +1,14 @@
+
+
+.renderProps{
+
+}
+
+.renderProps .a{
+    padding: 20px;
+    background: goldenrod;
+}
+.renderProps .b{
+    background: indianred;
+    padding: 20px;
+}
