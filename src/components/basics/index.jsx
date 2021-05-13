@@ -9,7 +9,8 @@ import ContextDemo from './context'
 import PureComponentDemo from './pureComponet'
 // render props
 import RenderPropsDemo from './renderProps'
-
+// 错误边界
+import ErrBoundaryDemo from './errBoundary'
 
 
 export default class index extends Component {
@@ -25,6 +26,8 @@ export default class index extends Component {
                 <PureComponentDemo/>
                 <hr />
                 <RenderPropsDemo/>
+                <hr />
+                <ErrBoundaryDemo/>
             </div>
         )
     }
