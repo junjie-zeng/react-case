@@ -27,7 +27,9 @@ export default class index extends Component {
                 <hr />
                 <RenderPropsDemo/>
                 <hr />
-                <ErrBoundaryDemo/>
+                {
+                    <ErrBoundaryDemo/>
+                }
             </div>
         )
     }

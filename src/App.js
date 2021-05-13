@@ -11,7 +11,7 @@ import AntdTest from './components/antd/index'
 import MobxDemo from './components/mobx-demo'
 import TodoList from './components/todoList'
 import Basics from './components/basics'
-
+import RcForm from './components/rcForm'
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 
 const { SubMenu } = Menu;
@@ -41,6 +41,9 @@ function App() {
             <Menu.Item key="8"><Link to="/mobx?id=8">MobxDemo</Link></Menu.Item>
             <Menu.Item key="9"><Link to="/todolist">TodoList</Link></Menu.Item>
             <Menu.Item key="10"><Link to="/basics">基础知识</Link></Menu.Item>
+            <Menu.Item key="11"><Link to="/rcform">RcForm</Link></Menu.Item>
+
+            
           </Menu>
         </Header>
 
@@ -55,8 +58,10 @@ function App() {
             <Route path="/antd" component={AntdTest}></Route>
             <Route path="/mobx" component={MobxDemo}></Route>
             <Route path="/basics" component={Basics}></Route>
+            <Route path="/RcForm" component={RcForm}></Route>
             {/* <Route path="/todolist" component={TodoList}></Route> */}
             <Route path="/todolist" render={(props) => (<TodoList {...props} />)}></Route>
+            
           </Switch>
         </div>
       </div>
