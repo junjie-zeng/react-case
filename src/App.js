@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Route, Link, Switch } from "react-router-dom"
+import { BrowserRouter, HashRouter, Route, Link, Switch,Redirect } from "react-router-dom"
 
 
 import Hooks from './components/hooks-demo/index'
@@ -21,17 +21,17 @@ const { Header, Content, Footer, Sider } = Layout;
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div >
         <Header className="header">
           <div className="logo" />
           <Menu
             theme="dark"
             mode="horizontal"
-            defaultSelectedKeys={['8']}
+            defaultSelectedKeys={['3']}
             style={{ lineHeight: '64px' }}
           >
-            <Menu.Item key="1"><Link to="/">HOOKS</Link></Menu.Item>
+            <Menu.Item key="1"><Link to="/hooks">HOOKS</Link></Menu.Item>
             <Menu.Item key="2"><Link to="/render_props">Render Props</Link></Menu.Item>
             <Menu.Item key="3"> <Link to="/appRoute">Router</Link></Menu.Item>
             <Menu.Item key="4"> <Link to="/context">上下文</Link></Menu.Item>
@@ -49,8 +49,8 @@ function App() {
 
         <div className="content">
           <Switch>
-            <Route path="/" exact component={Hooks}></Route>
-            <Route path="/appRoute/" component={AppRoute}></Route>
+            <Route path="/hooks" exact component={Hooks}></Route>
+            <Route path="/appRoute" component={AppRoute}></Route>
             <Route path="/context" component={ContextTest}></Route>
             <Route path="/hoc" component={Hoc}></Route>
             <Route path="/editor" component={Editor}></Route>
@@ -61,11 +61,12 @@ function App() {
             <Route path="/RcForm" component={RcForm}></Route>
             {/* <Route path="/todolist" component={TodoList}></Route> */}
             <Route path="/todolist" render={(props) => (<TodoList {...props} />)}></Route>
-            
+
+            <Redirect to="/appRoute"/>
           </Switch>
         </div>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
