@@ -28,7 +28,7 @@ function App() {
           <Menu
             theme="dark"
             mode="horizontal"
-            defaultSelectedKeys={['3']}
+            defaultSelectedKeys={['1']}
             style={{ lineHeight: '64px' }}
           >
             <Menu.Item key="1"><Link to="/hooks">HOOKS</Link></Menu.Item>
@@ -49,7 +49,7 @@ function App() {
 
         <div className="content">
           <Switch>
-            <Route path="/hooks" exact component={Hooks}></Route>
+            <Route path="/hooks"  component={Hooks}></Route>
             <Route path="/appRoute" component={AppRoute}></Route>
             <Route path="/context" component={ContextTest}></Route>
             <Route path="/hoc" component={Hoc}></Route>
@@ -62,7 +62,7 @@ function App() {
             {/* <Route path="/todolist" component={TodoList}></Route> */}
             <Route path="/todolist" render={(props) => (<TodoList {...props} />)}></Route>
 
-            <Redirect to="/appRoute"/>
+            <Redirect to="/hooks"/>
           </Switch>
         </div>
       </div>
