@@ -78,6 +78,16 @@ class newMobxState {
     deleteTod = (index) => {
         this.todos.splice(index, 1)
     }
+
+    // 清空
+    claerTodo = ()=>{
+        this.todos = []
+    }
+
+    // 更新某个数据的名称
+    updateTodoName = (index,name)=>{
+        this.todos[index] = {...this.todos[index],name}
+    }
 }
 
 

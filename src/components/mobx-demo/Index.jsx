@@ -3,6 +3,7 @@ import { Provider } from 'mobx-react'
 import mobxState from './index.state.js'
 import Lei from './Lei'
 import HanShu from './Hanshu'
+import HanShu2 from './Hanshu/index2'
 import ZhiJieSY from './ZhiJieSY'
 
 
@@ -20,6 +21,8 @@ class index extends Component {
                 <ZhiJieSY/>
                 <hr />
                 <HanShu/> 
+                <hr />
+                <HanShu2/> 
             </div>
         )
     }
