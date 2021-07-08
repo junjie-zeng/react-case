@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 /*
-    useEffect
+    useEffect（作用）
 
 
     1. useEffect的第二个参数，它是一个数组，数组中可以写入状态对应的变量，用于监听这个状态。

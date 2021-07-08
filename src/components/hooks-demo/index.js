@@ -8,6 +8,7 @@ import Example6 from './Example6'
 import Example7 from './Example7'
 
 import Tips from './tips'
+import DragList from './dragList'
 
 export default function Hooks() {
     return (
@@ -21,6 +22,7 @@ export default function Hooks() {
                 <li><Link to="/hooks/example6">useRef</Link></li>
                 <li><Link to="/hooks/example7">自定义</Link></li>
                 <li><Link to="/hooks/tips">Tips</Link></li>
+                <li><Link to="/hooks/dragList">拖拽列表</Link></li>
             </ul>
             <div className="right-content">
                 <h3 className="right-title">HOOKS体验</h3>
@@ -34,7 +36,8 @@ export default function Hooks() {
                         <Route path="/hooks/example6" component={Example6}></Route>
                         <Route path="/hooks/example7" component={Example7}></Route>
                         <Route path="/hooks/tips" component={Tips}></Route>
-                        <Redirect to = "/hooks/tips"/>
+                        <Route path="/hooks/dragLis" component={DragList}></Route>
+                        <Redirect to = "/hooks/dragLis"/>
                     </Switch>
                 </div>
             </div>

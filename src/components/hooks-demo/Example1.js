@@ -34,6 +34,8 @@ class Example extends Component {
 
 }
 
+
+
 // hooks
 function _Example() {
     const [count, setCount] = useState(0)
@@ -44,6 +46,9 @@ function _Example() {
         </div>
     )
 }
+
+
+
 
 // hooks 多状态声明
 function __Example() {
@@ -76,4 +81,38 @@ function __Example() {
         </div>
     )
 }
-export default __Example
+
+/*
+    useState：将数据和行为关联起来了，这种关联是强关联，数据和UI的关联是弱关联
+
+    相同的类型具有相同的行为，我们组合相同类型事物的时候，不能把他们看作是一团东西去组合
+    我们因该把他们分散开在组合起来，这叫组合这叫解耦，这就是hooks做的事情，使用我们的界面
+    有非常大的解藕能力
+*/
+// 自定义hook
+function useCount(initValue){
+    const [count,setCount] = useState(initValue)
+    return [count,()=>{
+        // setCount(count+1)
+        // 函数式更新
+        setCount(count=>count+1)
+    }]
+}
+
+function ___Example() {
+    const [count, addCount] = useCount(0)
+    return (
+        <div>
+            <h3>自定义状态hook</h3>
+            <p>你点击{count}次</p>
+            <button onClick={() => addCount(count + 1)}>点我</button>
+        </div>
+    )
+}
+
+
+
+
+// export default __Example
+// export default _Example
+export default ___Example

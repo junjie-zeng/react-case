@@ -10,8 +10,9 @@ const CountContext = createContext()
 
 
 function Counter(){
-    const count = useContext(CountContext)
-    return (<h2>{count}</h2>)
+    const obj = useContext(CountContext)
+    console.log(obj)
+    return (<h2>{obj.count}</h2>)
 }
 
 
@@ -23,7 +24,7 @@ function Example() {
         <div>
             <p>你点击的次数 {count}</p>
             <button onClick={() => { setCount(count + 1) }}>点我</button>
-            <CountContext.Provider value={count}>
+            <CountContext.Provider value={{count}}>
                 <Counter/>
             </CountContext.Provider>
         </div>

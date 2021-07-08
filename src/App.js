@@ -12,6 +12,7 @@ import MobxDemo from './components/mobx-demo'
 import TodoList from './components/todoList'
 import Basics from './components/basics'
 import RcForm from './components/rcForm'
+import AntdMobile from './components/antdMobile'
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 
 const { SubMenu } = Menu;
@@ -21,14 +22,14 @@ const { Header, Content, Footer, Sider } = Layout;
 
 function App() {
   return (
-    <BrowserRouter>
+    
       <div >
         <Header className="header">
           <div className="logo" />
           <Menu
             theme="dark"
             mode="horizontal"
-            defaultSelectedKeys={['1']}
+            defaultSelectedKeys={['7.1']}
             style={{ lineHeight: '64px' }}
           >
             <Menu.Item key="1"><Link to="/hooks">HOOKS</Link></Menu.Item>
@@ -38,6 +39,7 @@ function App() {
             <Menu.Item key="5"> <Link to="/hoc">Hoc</Link></Menu.Item>
             <Menu.Item key="6"> <Link to="/editor">编辑器案例</Link></Menu.Item>
             <Menu.Item key="7"><Link to="/antd">Antd</Link></Menu.Item>
+            <Menu.Item key="7.1"><Link to="/antd_mobile">Antd-mobile</Link></Menu.Item>
             <Menu.Item key="8"><Link to="/mobx?id=8">MobxDemo</Link></Menu.Item>
             <Menu.Item key="9"><Link to="/todolist">TodoList</Link></Menu.Item>
             <Menu.Item key="10"><Link to="/basics">基础知识</Link></Menu.Item>
@@ -56,6 +58,7 @@ function App() {
             <Route path="/editor" component={Editor}></Route>
             <Route path="/render_props" component={RenderProp}></Route>
             <Route path="/antd" component={AntdTest}></Route>
+            <Route path="/antd_mobile" component={AntdMobile}></Route>
             <Route path="/mobx" component={MobxDemo}></Route>
             <Route path="/basics" component={Basics}></Route>
             <Route path="/RcForm" component={RcForm}></Route>
@@ -66,7 +69,7 @@ function App() {
           </Switch>
         </div>
       </div>
-    </BrowserRouter>
+   
   );
 }
 

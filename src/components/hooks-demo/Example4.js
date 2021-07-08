@@ -1,8 +1,10 @@
-import { useReducer, createContext, useContext } from 'react'
+import { useReducer, createContext, useContext, useMemo, useEffect } from 'react'
 
 /*
 
     useReducer
+
+    https://zhuanlan.zhihu.com/p/69622832
 */
 
 // useReducer 初体验
@@ -18,11 +20,20 @@ function Example() {
         }
     }, 0)
 
+    useEffect(()=>{
+        console.log("count ...",count)
+    },[count])
+
+    const handleCount = (type) => {
+        console.log(count)
+        dispatch(type)
+    }
+
     return (
         <div>
-            <h2>现在的分数是{count}</h2>
-            <button onClick={() => dispatch('add')}>加</button>
-            <button onClick={() => dispatch('sub')}>减</button>
+            <h5>count{count}</h5>
+            <button onClick={() => handleCount('add')}>加</button>
+            <button onClick={() => handleCount('sub')}>减</button>
         </div>
     )
 }
@@ -66,13 +77,19 @@ function Buttons() {
     )
 }
 
+
 function _Example() {
     return (
         <div>
+            <Example />
+            <hr />
             <Color>
                 <ShowArea />
                 <Buttons />
             </Color>
+
+
+            
         </div>
     )
 }
