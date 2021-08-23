@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, HashRouter, Route, Link, Switch,Redirect } from "react-router-dom"
+import { BrowserRouter, HashRouter, Route, Link, Switch, Redirect } from "react-router-dom"
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
