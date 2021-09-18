@@ -3,7 +3,7 @@
 import ListViewDemo from './listViewDemo'
 import UseReducerDome from './useReducerDome/index'
 import Tab from './tab'
-
+import ToastTest from './toastTest'
 
 
 
@@ -16,6 +16,8 @@ const Index = () => {
 
             {/* 自定义useRedurce */}
             <UseReducerDome />
+
+            <ToastTest/>
 
             {/* <ListViewDemo/> */}
         </div>
