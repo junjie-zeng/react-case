@@ -1,5 +1,5 @@
-import { BrowserRouter, HashRouter, Route, Link, Switch, Redirect } from "react-router-dom"
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import {  Route, Switch, Redirect } from "react-router-dom"
+// import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 import AllLink from './components/allLink'
 import Hooks from './components/hooks-demo/index'
 import AppRoute from './components/router-demo/index'
@@ -17,8 +17,8 @@ import KeepAlive from "./components/keepAlive/index";
 
 
 
-const { SubMenu } = Menu;
-const { Header, Content, Footer, Sider } = Layout;
+// const { SubMenu } = Menu;
+// const { Header, Content, Footer, Sider } = Layout;
 
 
 

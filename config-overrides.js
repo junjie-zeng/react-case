@@ -1,4 +1,4 @@
-const { override, fixBabelImports, addWebpackResolve, addDecoratorsLegacy } = require('customize-cra');
+const { override, fixBabelImports, addWebpackResolve, addDecoratorsLegacy,disableEsLint } = require('customize-cra');
 const path = require('path')
 module.exports = override(
     // fixBabelImports('import', {
@@ -6,6 +6,7 @@ module.exports = override(
     //     libraryDirectory: 'es',
     //     style: 'css',
     // }),
+    // disableEsLint(),
     fixBabelImports('import', {
         libraryName: 'antd-mobile',
         style: 'css',
