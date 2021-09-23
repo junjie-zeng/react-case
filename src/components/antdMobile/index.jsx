@@ -6,18 +6,18 @@ import Tab from './tab'
 import ToastTest from './toastTest'
 
 
-
+import './index.css'
 
 const Index = () => {
     const _style = { position: 'fixed', top: '0', 'zIndex': 1, width: '100%', height: '100%', background: 'white'}
     return (
         <div style={_style}>
-            {/* <Tab/> */}
+            <Tab/>
 
             {/* 自定义useRedurce */}
-            <UseReducerDome />
+            {/* <UseReducerDome /> */}
 
-            <ToastTest/>
+            {/* <ToastTest/> */}
 
             {/* <ListViewDemo/> */}
         </div>

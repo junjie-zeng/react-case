@@ -1,0 +1,32 @@
+
+
+
+.tab_warp{
+    height: 100%;
+    background: goldenrod;
+    overflow-y: auto;
+}
+.tab_warp div:nth-child(1){
+    height: 150px;
+    background: honeydew;
+}
+
+.tab_warp div:nth-child(2){
+    height: 160px;
+    background: rgb(46, 189, 46);
+}
+
+.tab_warp div:nth-child(3){
+    height: 150px;
+    background: rgb(203, 206, 67);
+}
+
+.tab_warp div:nth-child(4){
+    height: 170px;
+    background: rgb(87, 32, 82);
+}
+
+.tab_warp div:nth-child(5){
+    height: 170px;
+    background: rgb(240, 251, 255);
+}
