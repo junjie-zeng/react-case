@@ -65,14 +65,16 @@ const Index = () => {
                     return y >= top && y < list[index + 1]
                 });
 
-                console.log(index,y)
+                // console.log(index, y)
                 // 注：有问题，当盒子高度不够时，点击tab也会触发滚动，CurrentIndex会被重新设置
                 setCurrentIndex(index)
+
+
             })
         })
     }, [])
 
-  
+
 
     const onTabClick = (tab, index) => {
         // 当前元素的高度（该高度也就是距离顶部的距离）
@@ -80,13 +82,12 @@ const Index = () => {
         console.log('onTabClick', index, tab)
         // 设置滚动条Y轴的距离
         tabWarpRef.current.scrollTo(0, Y)
-        // tabWarpRef.current.getElementsByTagName('div')[index].scrollIntoView()
         setCurrentIndex(index)
     }
 
     const handleChange = (tab, index) => {
         // console.log('onChange', index, tab);
-        setCurrentIndex(index)
+        // setCurrentIndex(index)
     }
 
     return (
