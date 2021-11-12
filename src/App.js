@@ -14,6 +14,7 @@ import Basics from './components/basics'
 import RcForm from './components/rcForm'
 import AntdMobile from './components/antdMobile'
 import KeepAlive from "./components/keepAlive/index";
+import JestTest from "./components/jest/index"
 
 
 
@@ -42,6 +43,8 @@ function App() {
           {/* <Route path="/todolist" component={TodoList}></Route> */}
           <Route path="/todolist" render={(props) => (<TodoList {...props} />)}></Route>
           <Route path="/keepAlive" component={KeepAlive}></Route>
+          <Route path="/jest" component={JestTest}></Route>
+          
           
           <Redirect to="/allLink" />
         </Switch>

@@ -13,7 +13,7 @@ const Index = () => {
         <>
             <div className='example_wrap'>
                 <Link to="/hooks/example/d1">useMome测试</Link>
-                <Link to="/hooks/example/d2">useMome测试</Link>
+                <Link to="/hooks/example/d2">useCallback测试</Link>
                 <Link to="/hooks/example/d3">嵌套组件测试</Link>
 
             </div>

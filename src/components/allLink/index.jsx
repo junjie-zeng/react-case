@@ -27,6 +27,7 @@ const Index = () => {
                     <Menu.Item key="10"><Link to="/basics">基础知识</Link></Menu.Item>
                     <Menu.Item key="11"><Link to="/rcform">RcForm</Link></Menu.Item>
                     <Menu.Item key="12"><Link to="/keepAlive">keep-alive</Link></Menu.Item>
+                    <Menu.Item key="13"><Link to="/jest">Jest</Link></Menu.Item>
                 </Menu>
             </Header>
         </>

@@ -7,6 +7,9 @@ import React, { useMemo, useState  } from 'react'
 /*
     useMemo测试
         测试结果:只有监听的那个状态发生了变化，才去执行 useMemo hook
+
+
+        结论：useMemo 可以优化当前组件也可以优化子组件，优化当前组件主要是通过 memoize 来将一些复杂的计算逻辑进行缓存。
 */
 
 
